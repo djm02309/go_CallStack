@@ -41,16 +41,21 @@ func (s *Stack) Pop() *Node {
 
 func main() {
 	s := NewStack()
+	s2 := NewCallStack()
+
 	s.Push(&Node{1})
 	s.Push(&Node{2})
 	s.Push(&Node{3})
 	s.Push(&Node{4})
 	s.Push(&Node{5})
 
+	s2.Push(&FunctionNode{"a", "b", "c", "d", "e"})
+
 	fmt.Println(s.Pop())
 	fmt.Println(s.Pop())
 	fmt.Println(s.Pop())
 	fmt.Println(s.Pop())
 	fmt.Println(s.Pop())
+	fmt.Println(s2.Pop())
 
 }
