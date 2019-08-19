@@ -32,6 +32,7 @@ func (s *Stack) Push(n *Node) {
 // Pop represents remove nodes in stack
 func (s *Stack) Pop() *Node {
 	if s.count == 0 {
+		fmt.Println("nothing to pop")
 		return nil
 	}
 	s.count--
